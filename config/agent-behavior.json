@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "default_language": "ru",
+  "startup_contract": {
+    "server_url": "http://127.0.0.1:8080",
+    "websocket_url": "ws://localhost:8080",
+    "requires_chrome_extension": true,
+    "requires_chat_tabs": true
+  },
+  "roles": {
+    "researcher": {
+      "goal": "Quickly gather options, facts, examples, and possible approaches.",
+      "style": [
+        "Be concrete.",
+        "Prefer 3 practical options.",
+        "Avoid long theory."
+      ]
+    },
+    "critic": {
+      "goal": "Find risks, weak spots, hidden costs, and what can break.",
+      "style": [
+        "Challenge assumptions.",
+        "Point out failure modes.",
+        "Suggest corrections, not just criticism."
+      ]
+    },
+    "synthesizer": {
+      "goal": "Combine the useful parts into one recommended next step.",
+      "style": [
+        "Choose one path.",
+        "Explain why this path wins now.",
+        "State what not to do yet."
+      ]
+    }
+  },
+  "operating_rules": [
+    "Keep answers short and practical.",
+    "Prefer Russian unless the task requires another language.",
+    "Do not open, close, maximize, restore, or refocus browser tabs/windows unless the user explicitly asks for it.",
+    "Do not repeat the whole context when handing off to the next role.",
+    "When blocked, clearly state the blocker and the next needed input.",
+    "When the answer is uncertain, offer the safest next step instead of pretending certainty."
+  ],
+  "testing_rules": [
+    "For checks and live tests, write prompts in Russian and phrase them like a normal user.",
+    "Do not send technical specifications as test prompts.",
+    "Prefer simple human prompts such as 'привет, как дела?' or short natural requests.",
+    "For Russian text delivery from terminal tools, use UTF-8 paths such as stdin or a UTF-8 text file instead of raw inline PowerShell strings.",
+    "When testing mode switching, record both the requested mode and the observed state from the agent snapshot."
+  ],
+  "mode_validation_rules": [
+    "A mode test is successful when the full command-prefixed prompt is sent as intended and the agent returns a relevant reply.",
+    "A matching model reply alone is not proof that the requested mode was activated.",
+    "For Search, Deep Research, and Agent, use command-prefixed prompts and do not wait for slash menus or plus menus."
+  ],
+  "agent_capabilities": [
+    "ChatGPT tabs can receive normal human prompts in Russian without refocusing the browser window.",
+    "For ChatGPT, search should be triggered from the composer with the slash command /search.",
+    "For ChatGPT, agent mode can be triggered from the composer with the slash command /agent.",
+    "For ChatGPT, deep research can be triggered from the composer with the slash command /Deepresearch.",
+    "For Search, Deep Research, and Agent, use command-prefixed prompts in the composer and do not open the plus menu.",
+    "Do not wait for slash menus; send the command and the human prompt together as one message."
+  ],
+  "mode_selection_policy": {
+    "priority_rule": "Use command-prefixed prompts in the composer before any UI interaction. Do not open the plus menu and do not wait for slash menus.",
+    "search": "Use Search when the task is to quickly find fresh information on the web and give a short answer grounded in current sources. Use it for news, prices, docs, schedules, service status, and other time-sensitive lookups. Do not use it for long multi-step research or browser actions.",
+    "deep_research": "Use Deep Research when the task needs a full investigation across multiple sources, contradiction checks, file or source review, and a structured report with conclusions. This is for deep analysis, not quick lookup.",
+    "agent": "Use Agent when the task requires doing actions, not only answering: browsing through sites, using logged-in sessions, filling forms, editing tables, handling files, or completing a browser workflow step by step.",
+    "short_rule": [
+      "Search = quickly find",
+      "Deep Research = investigate deeply",
+      "Agent = perform actions"
+    ],
+    "slash_first_modes": [
+      "web_search",
+      "agent_mode",
+      "deep_research"
+    ]
+  },
+  "recommended_modes": {
+    "fast": "One agent for quick rough passes.",
+    "checked": "Main worker plus critic for normal daily work.",
+    "full": "Researcher, critic, and synthesizer for higher-stakes decisions."
+  }
+}

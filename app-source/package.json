@@ -1,0 +1,19 @@
+{
+  "name": "broagents-app-source",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Editable source for the BROAGENTS dashboard and desktop shell",
+  "main": "main.js",
+  "scripts": {
+    "ui": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.4.1",
+    "vite": "^5.4.21"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "AI Tabs Bridge",
+  "version": "1.0.0",
+  "description": "Bridge ChatGPT and Gemini tabs to a local WebSocket server.",
+  "permissions": [
+    "activeTab",
+    "debugger",
+    "scripting",
+    "tabs",
+    "windows",
+    "alarms",
+    "webNavigation"
+  ],
+  "host_permissions": [
+    "*://chatgpt.com/*",
+    "*://gemini.google.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://chatgpt.com/*",
+        "*://gemini.google.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

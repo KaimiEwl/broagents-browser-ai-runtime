@@ -1,0 +1,19 @@
+{
+  "name": "broagents",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Portable browser agents runtime for ChatGPT and Gemini tabs",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "launch": "powershell -ExecutionPolicy Bypass -File .\\scripts\\start-broagents.ps1",
+    "launch:clean": "powershell -ExecutionPolicy Bypass -File .\\scripts\\start-broagents.ps1 -ResetState",
+    "launch:full": ".\\start-broagents-full.cmd",
+    "send:agent": "node .\\scripts\\send-agent-message.js",
+    "reset": "powershell -ExecutionPolicy Bypass -File .\\scripts\\reset-broagents-state.ps1",
+    "stop": "powershell -ExecutionPolicy Bypass -File .\\scripts\\stop-broagents.ps1"
+  },
+  "dependencies": {
+    "ws": "^8.19.0"
+  }
+}
