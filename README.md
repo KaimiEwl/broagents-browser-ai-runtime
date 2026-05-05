@@ -1,53 +1,44 @@
 # BROAGENTS Browser AI Runtime
 
-![Project preview](docs/screenshots/preview.png)
+![Project preview](docs/screenshots/preview.svg)
 
-A local control center for coordinating AI browser tabs as role-based agents.
+A Chrome app/extension plus dashboard for connecting multiple AI browser agents into one controllable workspace.
 
-## Demo
+## What It Does
+
+BROAGENTS registers AI browser tabs, gives them roles and lets an operator coordinate work across agents from a local control panel. It is built for browser-based AI workflows where several assistants need to share context and stay visible.
+
+## Public Links
 
 - GitHub: https://github.com/KaimiEwl/broagents-browser-ai-runtime
-- Live demo: not applicable for this project type
-- Video: planned
-- Case notes: see `docs/architecture.md`
-
-## What it shows
-
-This project shows AI tooling, browser automation architecture, WebSocket coordination, Chrome extension packaging and operator-focused UX.
+- Portfolio card: https://kaimiewl.github.io/#work
+- Architecture notes: `docs/architecture.md`
 
 ## Features
 
+- Chrome extension for connecting ChatGPT/Gemini-style tabs
 - Local HTTP/WebSocket server
-- Chrome extension for ChatGPT/Gemini tabs
-- Dashboard for registered agents
-- Role and scenario configuration
-- Windows launch/reset scripts
+- Dashboard for active agents and scenarios
+- Role and task configuration
+- Windows launch and reset scripts
 
-## Tech stack
+## Stack
 
-- Node.js
-- WebSocket
-- Chrome Extension
-- React/Vite
-- PowerShell
+Node.js, WebSocket, Chrome Extension, React/Vite, PowerShell.
 
-## Local setup
+## Run Locally
 
-```
+```bash
 npm install
 npm start
 ```
 
-## Verification
+## Check
 
-```
+```bash
 node --check server.js
 ```
 
 ## Status
 
-Demo export. Local state, backups and runtime logs are excluded.
-
-## Security and cleanup
-
-This public repository is a clean portfolio export. It intentionally excludes production secrets, local databases, logs, generated media, backups, runtime folders and private deployment artifacts.
+Demo export. Local state, browser sessions, backups, logs and private runtime files are excluded.

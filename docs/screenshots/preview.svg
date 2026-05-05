@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 810" role="img" aria-labelledby="title desc">
+  <title id="title">BROAGENTS Chrome app preview</title>
+  <desc id="desc">A Chrome extension and desktop dashboard connecting multiple AI agents in browser tabs.</desc>
+  <rect width="1440" height="810" fill="#f5f7fb"/>
+  <rect x="104" y="86" width="1232" height="638" rx="30" fill="#ffffff"/>
+  <text x="172" y="162" fill="#172033" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="900">BROAGENTS</text>
+  <text x="172" y="204" fill="#64748b" font-family="Inter, Arial, sans-serif" font-size="22">Chrome app + dashboard that connects multiple AI agents in browser tabs.</text>
+
+  <g transform="translate(172 278)">
+    <rect width="420" height="300" rx="24" fill="#172033"/>
+    <rect x="28" y="30" width="364" height="50" rx="14" fill="#263244"/>
+    <circle cx="58" cy="55" r="12" fill="#dc5f5f"/>
+    <circle cx="92" cy="55" r="12" fill="#f59e0b"/>
+    <circle cx="126" cy="55" r="12" fill="#10b981"/>
+    <rect x="42" y="118" width="150" height="58" rx="16" fill="#eff6ff"/>
+    <rect x="228" y="118" width="150" height="58" rx="16" fill="#ecfdf5"/>
+    <rect x="42" y="204" width="150" height="58" rx="16" fill="#fef3c7"/>
+    <rect x="228" y="204" width="150" height="58" rx="16" fill="#fee2e2"/>
+    <text x="73" y="153" fill="#1d4ed8" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="900">Agent 1</text>
+    <text x="259" y="153" fill="#0f766e" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="900">Agent 2</text>
+    <text x="73" y="239" fill="#92400e" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="900">Agent 3</text>
+    <text x="259" y="239" fill="#b91c1c" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="900">Agent 4</text>
+  </g>
+
+  <g transform="translate(674 300)" font-family="Inter, Arial, sans-serif">
+    <rect width="470" height="74" rx="18" fill="#f8fafc" stroke="#dbe2ea"/>
+    <rect y="104" width="470" height="74" rx="18" fill="#f8fafc" stroke="#dbe2ea"/>
+    <rect y="208" width="470" height="74" rx="18" fill="#f8fafc" stroke="#dbe2ea"/>
+    <text x="32" y="46" fill="#172033" font-size="21" font-weight="900">Chrome extension catches browser tabs</text>
+    <text x="32" y="150" fill="#172033" font-size="21" font-weight="900">Dashboard assigns roles and tasks</text>
+    <text x="32" y="254" fill="#172033" font-size="21" font-weight="900">Agents work together instead of separately</text>
+  </g>
+</svg>
